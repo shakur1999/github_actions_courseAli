@@ -1,0 +1,17 @@
+name: shell commands
+
+# events placed here with ON keyword
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo string
+      - run: echo "Hello World from Mars"
+      - name: multiline script
+        run: | 
+          node -v
+          npm -v 
+          pip -v
+          
