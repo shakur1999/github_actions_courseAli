@@ -12,20 +12,20 @@ jobs:
         run: |
            node -v 
            npm -v
-      - name: python Command
-        run:
-          import platform
+  #     - name: python Command
+  #       run:
+  #         import platform
 
-          print(platform.processsor())
-        shell: python
-  run-windows-commad:
-    runs-on: windows-latest
-    needs: ["run-shell-command"]
-    steps:
-      - name: Direcoty
-      Powershell
-        run: Get-Location
-      - name: Directory Bash
-        run: PWD
-        shell: bash
+  #         print(platform.processsor())
+  #       shell: python
+  # run-windows-commad:
+  #   runs-on: windows-latest
+  #   needs: ["run-shell-command"]
+  #   steps:
+  #     - name: Direcoty
+  #     Powershell
+  #       run: Get-Location
+  #     - name: Directory Bash
+  #       run: PWD
+  #       shell: bash
 
