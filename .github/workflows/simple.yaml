@@ -18,4 +18,14 @@ jobs:
 
           print(platform.processsor())
         shell: python
+  run-windows-commad:
+    runs-on: windows-latest
+    needs: ["run-shell-command"]
+    steps:
+      - name: Direcoty
+      Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: PWD
+        shell: bash
 
