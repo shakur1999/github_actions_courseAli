@@ -1,3 +1,21 @@
 name: Actions Workflow
 
-on: [push, pull_request]
+on: 
+  push:
+  pull_request:
+    [closed, assigned, opened, reopened]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITRY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          git clone
+
